@@ -15,6 +15,7 @@ public class _CharacterController : MonoBehaviour
     public bool jumpAvailable = true;
     [HideInInspector]
     public Vector3 originalPos;
+    private moveSpeed = 2.0f;
 
     void Start()
     {
@@ -63,11 +64,11 @@ public class _CharacterController : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.position += Vector3.left * Time.deltaTime * 2.0f;
+            rb.position += Vector3.left * Time.deltaTime * moveSpeed;
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            rb.position += Vector3.right * Time.deltaTime * 2.0f;
+            rb.position += Vector3.right * Time.deltaTime * moveSpeed;
         }
 
            

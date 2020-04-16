@@ -7,12 +7,12 @@ using UnityEngine.PostProcessing;
 public class Change : MonoBehaviour
 {
     PostProcessingProfile m_Profile;
-    //[HideInInspector]
+    [HideInInspector]
     public static int colorState;
-    public Vector3 rgbZero;
-    public Vector3 rgbR;
-    public Vector3 rgbG;
-    public Vector3 rgbB;
+    private Vector3 rgbZero;
+    private Vector3 rgbR;
+    private Vector3 rgbG;
+    private Vector3 rgbB;
 
     void Awake()
     {
@@ -52,7 +52,7 @@ public class Change : MonoBehaviour
         {
             if (colorState != 1)
             {
-                changeState(1); //red
+                changeState(1); //blue
             }
 
             else
@@ -62,7 +62,7 @@ public class Change : MonoBehaviour
         {
             if (colorState != 2)
             {
-                changeState(2); //red
+                changeState(2); //normal
             }
             
         }
